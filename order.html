@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Orders</title>
+  </head>
+  <body>
+    <div id="wrapper" class="d-flex">
+      <div class="sidebar p-3">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Dashboard</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              data-toggle="dropdown"
+              href="#"
+              role="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Stock</a
+            >
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="product.html">Products</a>
+              <a class="dropdown-item" href="inventory.html">Inventory</a>
+              <a class="dropdown-item" href="orders.html">Orders</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              data-toggle="dropdown"
+              href="#"
+              role="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Sales</a
+            >
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="sales.html">Sales</a>
+              <a class="dropdown-item" href="transaction.html">Transaction</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              data-toggle="dropdown"
+              href="#"
+              role="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Quotation
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="generate-quotation.html"
+                >Generate Quotation
+              </a>
+              <a class="dropdown-item" href="qutations.html">Quotations</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              data-toggle="dropdown"
+              href="#"
+              role="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Invoice
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="generate-invoice.html"
+                >Generate Invoice
+              </a>
+              <a class="dropdown-item" href="invoices.html">Invoices</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              data-toggle="dropdown"
+              href="#"
+              role="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Expense
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="add-expense.html">Add Expense</a>
+              <a class="dropdown-item" href="expenses.html">View Expense</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              data-toggle="dropdown"
+              href="#"
+              role="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Suppliers
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="add-supplier.html"
+                >Add Suppliers
+              </a>
+              <a class="dropdown-item" href="suppliers.html">View Suppliers</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              data-toggle="dropdown"
+              href="#"
+              role="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Customers
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="add-customers.html"
+                >Add Customers
+              </a>
+              <a class="dropdown-item" href="customers.html">View Customers</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="reports.html" class="nav-link">Reports</a>
+          </li>
+        </ul>
+      </div>
+      <div id="content">
+        <div class="container">
+          <div class="d-flex">
+            <form class="form" onsubmit="createOrder()">
+              <label for="name"></label>
+              <input
+                class="form-control"
+                type="text"
+                id="name"
+                placeholder="Product Name"
+              />
+
+              <label for="quantity">Maximum Retail Price</label>
+              <input
+                type="number"
+                class="form-control"
+                id="quantity"
+                placeholder="Qunatity"
+              />
+              <label for="description">Description</label>
+              <textarea
+                id="description"
+                class="form-control"
+                rows="10"
+              ></textarea>
+              <button class="btn btn-primary" type="submit">Add Order</button>
+            </form>
+            <div class="order-tabel">
+              <table class="table table-dark border table-hover">
+                <thead>
+                  <tr>
+                    <td>S. NO</td>
+                    <td>Product</td>
+                    <td>Quantity</td>
+                    <td>Price</td>
+                    <td>Description</td>
+                    <td>Action</td>
+                  </tr>
+                </thead>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- JS, Popper.js, and jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+  </body>
+</html>

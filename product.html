@@ -140,7 +140,7 @@
       <div id="content">
         <div class="container">
           <div class="d-flex">
-            <form onsubmit="addProduct()" class="form">
+            <form class="form" onsubmit="addProduct()">
               <label for="name"></label>
               <input
                 class="form-control"
@@ -158,7 +158,7 @@
               <label for="image">Image URL</label>
               <input
                 class="form-control"
-                type="file"
+                type="text"
                 id="image"
                 placeholder="Image URL"
               />
@@ -186,6 +186,7 @@
                 class="form-control"
                 rows="10"
               ></textarea>
+              <button class="btn btn-primary" type="submit">Add Product</button>
             </form>
             <div class="product-tabel">
               <table class="table table-dark border table-hover">

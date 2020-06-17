@@ -141,7 +141,7 @@
         <div class="container">
           <div class="d-flex">
             <form class="form" onsubmit="createOrder()">
-              <label for="name"></label>
+              <label for="name">Product Name</label>
               <input
                 class="form-control"
                 type="text"
@@ -162,6 +162,8 @@
                 class="form-control"
                 rows="10"
               ></textarea>
+              <label for="payment">Payment</label>
+              <input type="number" id="payment" placeholder="Pay amount" />
               <button class="btn btn-primary" type="submit">Add Order</button>
             </form>
             <div class="order-tabel">

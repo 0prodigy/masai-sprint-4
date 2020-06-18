@@ -117,3 +117,27 @@ function addProductList() {
   list.innerHTML = productsList.innerHTML;
   productsList.append(list);
 }
+
+// Add suppliers
+
+var suppliers = [];
+
+function addSuppliers() {
+  event.preventDefault();
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var phone = document.getElementById("phone").value;
+  var address = document.getElementById("address").value;
+  var desc = document.getElementById("description").value;
+
+  var supplier = {
+    name: name,
+    email: email,
+    phone: phone,
+    address: address,
+    desc: desc,
+  };
+  suppliers = JSON.parse(window.localStorage.getItem("supplier")) || [];
+  suppliers.push(supplier);
+  window.localStorage.setItem("supplier", JSON.stringify(suppliers));
+}

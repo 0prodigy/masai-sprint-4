@@ -141,3 +141,27 @@ function addSuppliers() {
   suppliers.push(supplier);
   window.localStorage.setItem("supplier", JSON.stringify(suppliers));
 }
+
+// Add customers
+
+var customers = [];
+
+function addCustomers() {
+  event.preventDefault();
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var phone = document.getElementById("phone").value;
+  var address = document.getElementById("address").value;
+  var desc = document.getElementById("description").value;
+
+  var customer = {
+    name: name,
+    email: email,
+    phone: phone,
+    address: address,
+    desc: desc,
+  };
+  customers = JSON.parse(window.localStorage.getItem("customer")) || [];
+  customers.push(customer);
+  window.localStorage.setItem("customer", JSON.stringify(customers));
+}
